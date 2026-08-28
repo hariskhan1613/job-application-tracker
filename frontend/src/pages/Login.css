@@ -1,0 +1,208 @@
+/* =========================================================
+   JOB TRACKER - LOGIN PAGE
+   ========================================================= */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 32px 16px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(37, 99, 235, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(124, 58, 237, 0.10),
+            transparent 35%
+        ),
+        var(--color-background);
+}
+
+
+/* ---------------------------------------------------------
+   AUTH CARD
+   --------------------------------------------------------- */
+
+.auth-card {
+    width: min(100%, 440px);
+
+    padding: 40px;
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
+
+.auth-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+/* ---------------------------------------------------------
+   LOGO
+   --------------------------------------------------------- */
+
+.auth-logo {
+    display: inline-block;
+
+    margin-bottom: 28px;
+
+    color: var(--color-primary);
+
+    font-size: 1.15rem;
+    font-weight: 800;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* ---------------------------------------------------------
+   TITLE
+   --------------------------------------------------------- */
+
+.auth-title {
+    margin: 0;
+
+    font-size: 2rem;
+    font-weight: 750;
+
+    letter-spacing: -0.03em;
+}
+
+
+/* ---------------------------------------------------------
+   SUBTITLE
+   --------------------------------------------------------- */
+
+.auth-subtitle {
+    margin-top: 10px;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.95rem;
+}
+
+
+/* ---------------------------------------------------------
+   FORM
+   --------------------------------------------------------- */
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* ---------------------------------------------------------
+   FORM GROUP
+   --------------------------------------------------------- */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* ---------------------------------------------------------
+   LABEL
+   --------------------------------------------------------- */
+
+.form-group label {
+    color: var(--color-text-primary);
+
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------
+   SUBMIT BUTTON
+   --------------------------------------------------------- */
+
+.auth-submit {
+    width: 100%;
+
+    margin-top: 4px;
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------- */
+
+.auth-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    margin-top: 26px;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.875rem;
+
+    text-align: center;
+}
+
+.auth-footer a {
+    color: var(--color-primary);
+
+    font-weight: 600;
+
+    transition: color var(--transition-fast);
+}
+
+.auth-footer a:hover {
+    color: var(--color-primary-hover);
+
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 480px) {
+    .auth-page {
+        padding: 20px 12px;
+    }
+
+    .auth-card {
+        padding: 30px 20px;
+
+        border-radius: var(--radius-lg);
+    }
+
+    .auth-title {
+        font-size: 1.75rem;
+    }
+
+    .auth-footer {
+        flex-direction: column;
+    }
+}

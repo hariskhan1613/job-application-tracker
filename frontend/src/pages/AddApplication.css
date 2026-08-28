@@ -1,0 +1,920 @@
+/* =========================================================
+   JOB TRACKER - ADD APPLICATION
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.add-application-page {
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    color: #17233f;
+
+    background:
+        radial-gradient(
+            circle at 84% 8%,
+            rgba(111, 82, 246, 0.14),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 8% 55%,
+            rgba(62, 126, 255, 0.10),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f8faff 0%,
+            #f4f6ff 45%,
+            #fafbff 100%
+        );
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.add-application-page::before {
+    content: "";
+
+    position: fixed;
+
+    width: 520px;
+    height: 520px;
+
+    top: -260px;
+    right: -170px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(116, 70, 237, 0.16),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.add-application-header {
+    position: relative;
+
+    z-index: 10;
+
+    border-bottom:
+        1px solid rgba(105, 121, 173, 0.14);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.82),
+            rgba(248, 249, 255, 0.78)
+        );
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+}
+
+
+.add-application-header-content {
+    width: min(
+        calc(100% - 56px),
+        1400px
+    );
+
+    min-height: 78px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.add-application-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #17233f;
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+
+    letter-spacing: -0.025em;
+}
+
+
+.add-application-brand-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7446ed,
+            #3478ed
+        );
+
+    color: #ffffff;
+
+    font-size: 0.78rem;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 10px 25px
+        rgba(84, 91, 224, 0.25);
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.add-application-back-button {
+    min-height: 40px;
+
+    padding: 0 16px;
+
+    border:
+        1px solid rgba(83, 105, 168, 0.20);
+
+    border-radius: 11px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    color: #425174;
+
+    font-size: 0.84rem;
+
+    font-weight: 650;
+
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        background-color 180ms ease,
+        box-shadow 180ms ease;
+}
+
+
+.add-application-back-button:hover:not(:disabled) {
+    transform: translateY(-1px);
+
+    border-color:
+        rgba(84, 91, 224, 0.32);
+
+    color: #4d5fe0;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 20px
+        rgba(53, 71, 130, 0.08);
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.add-application-container {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(
+        calc(100% - 56px),
+        960px
+    );
+
+    margin: 0 auto;
+
+    padding:
+        58px 0 80px;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.add-application-intro {
+    margin-bottom: 30px;
+}
+
+
+.add-application-eyebrow {
+    margin: 0 0 9px;
+
+    color: #5267dc;
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.11em;
+}
+
+
+.add-application-intro h1 {
+    margin: 0;
+
+    color: #14213d;
+
+    font-size: clamp(
+        2.1rem,
+        4vw,
+        3.1rem
+    );
+
+    font-weight: 760;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.055em;
+}
+
+
+.add-application-intro > p:last-child {
+    max-width: 650px;
+
+    margin: 14px 0 0;
+
+    color: #667594;
+
+    font-size: 0.98rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.add-application-card {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 34px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.96),
+            rgba(247, 248, 255, 0.91)
+        );
+
+    border:
+        1px solid rgba(105, 121, 173, 0.15);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 18px 50px
+        rgba(48, 64, 120, 0.08);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+.add-application-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 340px;
+    height: 340px;
+
+    left: -190px;
+    bottom: -220px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(74, 120, 238, 0.08),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SERVER ERROR
+   ========================================================= */
+
+.form-submit-error {
+    position: relative;
+
+    margin-bottom: 24px;
+
+    padding: 13px 15px;
+
+    border:
+        1px solid rgba(220, 73, 86, 0.20);
+
+    border-radius: 11px;
+
+    background:
+        rgba(254, 242, 242, 0.90);
+
+    color: #b42318;
+
+    font-size: 0.86rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.application-form-grid {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 23px 20px;
+}
+
+
+/* =========================================================
+   FORM FIELD
+   ========================================================= */
+
+.form-field {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.form-field-full {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.form-field label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 8px;
+
+    color: #293856;
+
+    font-size: 0.83rem;
+
+    font-weight: 700;
+}
+
+
+.required-mark {
+    color: #e04455;
+
+    font-weight: 800;
+}
+
+
+.optional-label {
+    margin-left: 4px;
+
+    color: #8b96aa;
+
+    font-size: 0.72rem;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    position: relative;
+
+    width: 100%;
+
+    border:
+        1px solid rgba(90, 108, 157, 0.20);
+
+    border-radius: 11px;
+
+    background:
+        rgba(255, 255, 255, 0.76);
+
+    color: #1d2a45;
+
+    font: inherit;
+
+    font-size: 0.88rem;
+
+    outline: none;
+
+    transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        background-color 180ms ease;
+}
+
+
+.form-field input,
+.form-field select {
+    height: 46px;
+
+    padding:
+        0 13px;
+}
+
+
+.form-field textarea {
+    min-height: 125px;
+
+    padding:
+        12px 13px;
+
+    resize: vertical;
+
+    line-height: 1.55;
+}
+
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #9aa5b9;
+}
+
+
+.form-field input:hover:not(:disabled),
+.form-field select:hover:not(:disabled),
+.form-field textarea:hover:not(:disabled) {
+    border-color:
+        rgba(84, 101, 165, 0.34);
+
+    background:
+        rgba(255, 255, 255, 0.90);
+}
+
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: #6474df;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(100, 116, 223, 0.12);
+}
+
+
+/* =========================================================
+   INPUT ERROR
+   ========================================================= */
+
+.form-field input.input-error,
+.form-field select.input-error,
+.form-field textarea.input-error {
+    border-color:
+        rgba(220, 73, 86, 0.62);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(220, 73, 86, 0.08);
+}
+
+
+.field-error {
+    margin-top: 6px;
+
+    color: #c03442;
+
+    font-size: 0.75rem;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   FORM FOOTER
+   ========================================================= */
+
+.application-form-footer {
+    position: relative;
+
+    margin-top: 30px;
+    padding-top: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top:
+        1px solid rgba(105, 121, 173, 0.13);
+}
+
+
+/* =========================================================
+   REQUIRED HINT
+   ========================================================= */
+
+.required-hint {
+    margin: 0;
+
+    color: #8792a8;
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.application-form-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   CANCEL BUTTON
+   ========================================================= */
+
+.form-cancel-button {
+    min-height: 44px;
+
+    padding: 0 18px;
+
+    border:
+        1px solid rgba(83, 105, 168, 0.20);
+
+    border-radius: 11px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    color: #425174;
+
+    font-size: 0.84rem;
+
+    font-weight: 650;
+
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        background-color 180ms ease;
+}
+
+
+.form-cancel-button:hover:not(:disabled) {
+    transform: translateY(-1px);
+
+    border-color:
+        rgba(84, 101, 165, 0.34);
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.form-submit-button {
+    min-height: 44px;
+
+    min-width: 154px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7446ed,
+            #3478ed
+        );
+
+    color: #ffffff;
+
+    font-size: 0.84rem;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 25px
+        rgba(73, 91, 224, 0.20);
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        opacity 180ms ease;
+}
+
+
+.form-submit-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(73, 91, 224, 0.28);
+}
+
+
+/* =========================================================
+   LOADING SPINNER
+   ========================================================= */
+
+.submit-spinner {
+    width: 15px;
+    height: 15px;
+
+    flex-shrink: 0;
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.38);
+
+    border-top-color: #ffffff;
+
+    border-radius: 50%;
+
+    animation:
+        submit-spin 700ms linear infinite;
+}
+
+
+@keyframes submit-spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.add-application-page button:disabled,
+.add-application-page input:disabled,
+.add-application-page select:disabled,
+.add-application-page textarea:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.62;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .add-application-container {
+        width: min(
+            calc(100% - 40px),
+            700px
+        );
+
+        padding-top: 45px;
+    }
+
+
+    .add-application-card {
+        padding: 27px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+    .add-application-header-content {
+        width: calc(100% - 32px);
+
+        min-height: 68px;
+    }
+
+
+    .add-application-container {
+        width: calc(100% - 32px);
+
+        padding-top: 38px;
+
+        padding-bottom: 55px;
+    }
+
+
+    .add-application-intro {
+        margin-bottom: 24px;
+    }
+
+
+    .add-application-intro h1 {
+        font-size: 2.05rem;
+    }
+
+
+    .add-application-intro > p:last-child {
+        font-size: 0.91rem;
+    }
+
+
+    .add-application-card {
+        padding: 23px 18px;
+
+        border-radius: 18px;
+    }
+
+
+    .application-form-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .form-field-full {
+        grid-column: auto;
+    }
+
+
+    .application-form-footer {
+        align-items: stretch;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+
+    .application-form-actions {
+        width: 100%;
+    }
+
+
+    .form-cancel-button,
+    .form-submit-button {
+        flex: 1;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .add-application-header-content {
+        width: calc(100% - 24px);
+    }
+
+
+    .add-application-container {
+        width: calc(100% - 24px);
+    }
+
+
+    .add-application-brand {
+        gap: 9px;
+
+        font-size: 0.95rem;
+    }
+
+
+    .add-application-brand-icon {
+        width: 35px;
+        height: 35px;
+
+        border-radius: 9px;
+    }
+
+
+    .add-application-back-button {
+        padding: 0 11px;
+
+        font-size: 0.76rem;
+    }
+
+
+    .add-application-intro h1 {
+        font-size: 1.85rem;
+    }
+
+
+    .add-application-card {
+        padding:
+            21px 15px;
+    }
+
+
+    .application-form-actions {
+        flex-direction: column;
+    }
+
+
+    .form-cancel-button,
+    .form-submit-button {
+        width: 100%;
+    }
+
+}
