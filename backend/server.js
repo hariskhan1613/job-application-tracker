@@ -58,6 +58,6 @@ app.use((req, res) => {
     }); //ye future mein debugging ke liye helpful hoga. ye json format mein response bhejega jisme success false hai aur message mein "Route not found" print karega.
 });
 
-app.listen(PORT, () => { //iska matlab hai ki server ko specified PORT pe listen karne ke liye start kar diya hai. ye callback function execute hoga jab server successfully start ho jayega aur specified PORT pe listen karne lagega.
+app.listen(PORT, "0.0.0.0", () => { //iska matlab hai ki server ko specified PORT pe listen karne ke liye start kar diya hai. ye callback function execute hoga jab server successfully start ho jayega aur specified PORT pe listen karne lagega.
     console.log(`Server running on port ${PORT}`); // ye terminal mein print karega ki server successfully start ho gaya hai aur specified PORT pe listen kar raha hai.
 });
